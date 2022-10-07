@@ -29,3 +29,14 @@ class AuthUser(models.Model):
         Это способ узнать, был ли пользователь аутентифицирован.
         """
         return True
+
+
+class Follower(models.Model):
+    """
+    Модель подписчиков и подписок
+    """
+    user = models.ForeignKey(AuthUser, on_delete=models.CASCADE, related_name='owner')
+    subscriber = models.ForeignKey(AuthUser, on_delete=models.CASCADE, related_name='subscriber')
+
+    def __str__(self):
+        return f'{self.subscriber} подписан на {self.user}'
