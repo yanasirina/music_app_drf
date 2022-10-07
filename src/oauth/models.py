@@ -40,3 +40,14 @@ class Follower(models.Model):
 
     def __str__(self):
         return f'{self.subscriber} подписан на {self.user}'
+
+
+class SocialLink(models.Model):
+    """
+    Модель ссылок на соц. сети пользователя
+    """
+    user = models.ForeignKey(AuthUser, on_delete=models.CASCADE, related_name='social_links')
+    link = models.URLField(max_length=100)
+
+    def __str__(self):
+        return f'{self.user}'
