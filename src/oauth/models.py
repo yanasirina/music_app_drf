@@ -1,7 +1,7 @@
 from django.core.validators import FileExtensionValidator
 from django.db import models
 
-from src.base.services import get_path_upload_avatar
+from src.base.services import *
 
 
 class AuthUser(models.Model):
@@ -18,7 +18,8 @@ class AuthUser(models.Model):
         upload_to=get_path_upload_avatar,
         blank=True,
         null=True,
-        validators=[FileExtensionValidator(allowed_extensions=['jpg '])]
+        validators=[FileExtensionValidator(allowed_extensions=['jpg ']),
+                    validate_size_image]
     )
 
     def __str__(self):
