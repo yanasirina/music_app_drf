@@ -1,6 +1,8 @@
 from django.core.validators import FileExtensionValidator
 from django.db import models
 
+from src.base.services import get_path_upload_avatar
+
 
 class AuthUser(models.Model):
     """
@@ -13,7 +15,7 @@ class AuthUser(models.Model):
     bio = models.TextField(max_length=2000, blank=True, null=True)
     display_name = models.CharField(max_length=50, blank=True, null=True)
     avatar = models.ImageField(
-        upload_to='',
+        upload_to=get_path_upload_avatar,
         blank=True,
         null=True,
         validators=[FileExtensionValidator(allowed_extensions=['jpg '])]
