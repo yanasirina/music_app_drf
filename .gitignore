@@ -34,3 +34,4 @@ doc-dev
 *.log
 .log
 
+my_keys.py
