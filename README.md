@@ -1,5 +1,5 @@
 # music_app_rest_api
-Project made with DRF for for searching, downloading and listening to music
+Project made with Django Rest Framework for searching, downloading and listening to music
 
 This project is under development.<br>
 ReadMe will be posted later.
