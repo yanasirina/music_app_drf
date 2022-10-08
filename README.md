@@ -1,7 +1,12 @@
 # music_app_rest_api
 Project made with DRF for for searching, downloading and listening to music
 
-# Stack:
+This project is under development.<br>
+ReadMe will be posted later.
+
+
+
+<!--# Stack:
 <li> Python
 <li> Django
 <li> Django Rest Framework
@@ -9,4 +14,4 @@ Project made with DRF for for searching, downloading and listening to music
 <li> Docker
 <li> Nginx
 <li> JavaScript
-<li> Kivy
+<li> Kivy-->
